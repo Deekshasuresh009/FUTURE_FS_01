@@ -20,5 +20,5 @@ This portfolio serves as a digital representation of my work and capabilities, h
 - JavaScript  
 
 
-## 📂 Project Structure
+
 

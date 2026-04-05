@@ -1,149 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Devi Deekshitha | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devi Deekshitha | Portfolio</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <h2>Devi</h2>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+<header>
+  <h2>Devi's Portfolio</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
 <!-- HERO -->
-<section id="home" class="hero">
-  <div class="overlay"></div>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm <span id="typing"></span></h1>
+    <p>Aspiring Full Stack Developer</p>
 
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Hi, I'm Devi 👋</h1>
-      <h2>Full Stack Web Development Intern</h2>
-      <p>Aspiring Software Developer | Web Enthusiast</p>
-
-      <div class="buttons">
-        <a href="resume.pdf" download class="btn">Download Resume</a>
-        <a href="https://github.com/deekshasuresh009" target="_blank" class="btn outline">GitHub</a>
-        <a href="https://linkedin.com/in/c-s-devi-deekshitha-7a4a51328" target="_blank" class="btn outline">LinkedIn</a>
-      </div>
+    <div class="buttons">
+      <button onclick="scrollToProjects()">View My Work</button>
     </div>
+  </div>
 
-    <div class="hero-img">
-      <img src="profile.jpg" alt="Profile">
-    </div>
+  <div class="hero-img">
+    <img src="profile.jpg">
   </div>
 </section>
 
 <!-- ABOUT -->
-<section>
-  <h2>About Me</h2>
-  <p>
-    Computer Science and Design student passionate about building real-world web applications.
-    Skilled in problem solving, full stack development, and continuously learning new technologies.
-  </p>
-</section>
+<section id="about" class="light-section">
 
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>C</span>
-    <span>Java</span>
-    <span>Python</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>MySQL</span>
-    <span>GitHub</span>
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="about-left">
+      <p>
+        I am a prefinal-year Computer Science student and an aspiring Full Stack Developer,
+        passionate about building scalable and user-focused web applications.
+        I enjoy transforming ideas into reliable software solutions with clean architecture
+        and efficient performance.
+      </p>
+  
+      <p>
+        I continuously explore modern technologies and follow best practices in development, problem-solving,
+        and system design to create impactful digital products.
+      </p>
+
+      <div class="about-buttons">
+        <a href="resume.pdf" class="btn">Download Resume</a>
+        
+      </div>
+
+      <!-- SKILLS -->
+      <div class="skills-grid">
+        <div class="skill-box">HTML5</div>
+        <div class="skill-box">CSS3</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">Java</div>
+        <div class="skill-box">MySQL</div>
+        <div class="skill-box">Git</div>
+        <div class="skill-box">Figma</div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE CARD -->
+    <div class="about-right">
+      <div class="experience-card">
+
+        <h3>Recent Highlights</h3>
+
+        <div class="exp-item">
+          <h4>Hackathon Achievement</h4>
+          <p>Secured 1st place in NOSTRADAMUS-2K26 Hackathon.</p>
+        </div>
+
+        <div class="exp-item">
+          <h4>Full Stack Projects</h4>
+          <p>Built 5+ projects including AI, ML, and Web Applications.</p>
+        </div>
+
+        <div class="exp-item">
+          <h4>Technical Skills</h4>
+          <p>Experienced in Full Stack Development & Problem Solving.</p>
+        </div>
+
+      </div>
+    </div>
+
   </div>
+
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
+<section id="projects" class="light-section">
+  <h2 data-aos="fade-up">My Projects</h2>
 
-  <div class="project-card">
-    <h3>Skill Hub</h3>
-    <p>Peer-to-peer skill exchange platform.</p>
+  <div class="project-grid">
+
+    <div class="project-card" data-aos="zoom-in" onclick="openProject('projects/skillhub.html')">
+      <h3>Skill Hub</h3>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" onclick="openProject('projects/pathfinding.html')">
+      <h3>Pathfinding</h3>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" onclick="openProject('projects/extension.html')">
+      <h3>Extension Analyzer</h3>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" onclick="openProject('projects/kmeans.html')">
+      <h3>K-Means</h3>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" onclick="openProject('projects/aura.html')">
+      <h3>AURA AI</h3>
+    </div>
+
   </div>
-
-  <div class="project-card">
-    <h3>Pathfinding Visualizer</h3>
-    <p>A*, Dijkstra & Greedy algorithms visualization.</p>
-  </div>
-
-  <div class="project-card">
-    <h3>Browser Extension Analyzer</h3>
-    <p>Cybersecurity-based extension analyzer tool.</p>
-  </div>
-
-  <div class="project-card">
-    <h3>K-Means Clustering</h3>
-    <p>Machine learning clustering implementation.</p>
-  </div>
-  
- <div class="project-card">
-    <h3>AURA-Health AI</h3>
-    <p>Artificial Intelligence & Healthcare.</p>
-  </div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <h2>Certifications & Achievements</h2>
-
-  <div class="project-card">
-    <h3>Honours Specialization</h3>
-    <p>Advanced Computer Networks & Blockchain Technology</p>
-  </div>
-
-   <div class="project-card">
-    <h3>NOSTRADAMUS-2K26</h3>
-    <p>Secured First place at RIMS HACKATHON(2026)</p>
-  </div>
-
-  <div class="project-card">
-    <h3>MRIOTHON 2.0</h3>
-    <p>24-Hour Hackathon on AI & Cyber Security (2025)</p>
-  </div>
-
-  <div class="project-card">
-    <h3>TECHNOVATE 2K25</h3>
-    <p>National Level IEEE Technical Symposium (Code Hunt)</p>
-  </div>
-
-  <div class="project-card">
-    <h3>ELECTRO QUEST</h3>
-    <p>Implemented Python-based pathfinding system using A*, Dijkstra & Greedy</p>
-  </div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: deekshasuresh1976@gmail.com</p>
-  <p>Phone: +91-7337866823</p>
+<section id="contact" class="light-section">
+
+  <h2 class="section-title">Get In Touch</h2>
+
+  <div class="contact-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-left">
+      <h3>Let’s Work Together</h3>
+
+      <p>
+        Actively seeking internship opportunities in Full Stack Development.
+      </p>
+      
+      <div class="contact-info">
+        <p>📧 deekshasuresh1976@gmail.com</p>
+        <p>📍 Karnataka, India</p>
+      </div>
+
+      <div class="social-icons">
+      <a href="https://linkedin.com/in/c-s-devi-deekshitha-7a4a51328" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/deekshasuresh009" target="_blank">💻 GitHub</a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="contact-right">
+      <form class="contact-form">
+
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Subject" required>
+
+        <textarea rows="5" placeholder="Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+      </form>
+    </div>
+
+  </div>
+
 </section>
 
-<footer>
-  <p>© 2026 Devi Deekshitha</p>
-</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
